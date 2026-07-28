@@ -1,0 +1,65 @@
+TEMPLATE SYAHRUL & HUMAIRA' — PEARL LILAC EDITION
+=================================================
+
+Fail utama:
+- index.html
+
+Visual:
+- images/pelamin-pearl-3d.webp
+- images/pelamin-pengantin-bunga-v2.webp
+- Setiap pengantin memegang sekuntum bunga yang menutup seluruh wajah.
+
+CARA TUKAR MAKLUMAT CUSTOMER
+1. Buka index.html dengan editor teks.
+2. Cari bahagian: const CUSTOMER = {
+3. Tukar tarikh, masa, tempat, alamat, peta dan nombor WhatsApp.
+
+Contoh:
+dateISO: "2026-12-12T11:00:00+08:00"
+displayDate: "Sabtu, 12 Disember 2026"
+shortDate: "Sabtu · 12 Disember 2026"
+hijriDate: "2 Rejab 1448H"
+time: "11:00 pagi — 5:00 petang"
+venue: "Dewan Seri Mutiara"
+address: "Alamat penuh majlis"
+googleMapsUrl: "https://maps.google.com/..."
+wazeUrl: "https://waze.com/ul?..."
+
+Jika pautan Maps/Waze dibiarkan kosong, template akan mencari alamat
+secara automatik menggunakan nilai "address".
+
+CARA MASUKKAN LAGU
+1. Masukkan fail MP3 ke dalam folder music.
+2. Isi bahagian song dalam index.html:
+
+song: {
+  title: "Nama lagu",
+  artist: "Nama penyanyi",
+  src: "music/lagu-customer.mp3"
+}
+
+Jika src dibiarkan kosong, kad memaparkan "Menunggu pilihan".
+
+UCAPAN TETAMU — SUPAYA SEMUA ORANG BOLEH NAMPAK
+1. Buka satu projek percuma di Supabase.
+2. Buka SQL Editor dan jalankan fail: SUPABASE-UCAPAN.sql
+3. Salin Project URL dan anon/publishable key.
+4. Cari guestbook dalam bahagian CUSTOMER dan isi:
+
+guestbook: {
+  supabaseUrl: "https://PROJECT-ANDA.supabase.co",
+  supabaseAnonKey: "KUNCI-ANON-ATAU-PUBLISHABLE",
+  table: "wishes"
+}
+
+Jika dua nilai itu kosong, bahagian ucapan masih boleh didemokan tetapi
+ucapan hanya disimpan pada telefon/peranti yang sama. Selepas Supabase
+disambungkan, semua tetamu akan membaca dan menghantar ucapan yang sama.
+
+Nota: Ucapan ialah ruangan awam. Pemilik boleh memadam ucapan yang tidak
+sesuai melalui Table Editor di Supabase.
+
+CARA GUNA DI GITHUB PAGES
+1. Upload SEMUA kandungan folder ini ke repository.
+2. Pastikan index.html berada di bahagian root repository.
+3. Aktifkan GitHub Pages daripada branch main.

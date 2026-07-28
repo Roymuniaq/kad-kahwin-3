@@ -1,0 +1,13 @@
+Letakkan fail MP3 pilihan customer di dalam folder ini.
+
+Kemudian buka index.html dan cari:
+const CUSTOMER = {
+
+Isi contoh:
+song: {
+  title: "Nama lagu",
+  artist: "Nama penyanyi",
+  src: "music/lagu-customer.mp3"
+}
+
+Jika customer belum memilih lagu, biarkan src kosong.
